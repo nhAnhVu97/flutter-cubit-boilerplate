@@ -1,0 +1,59 @@
+build: dart run build_runner build --delete-conflicting-outputs
+
+watch: dart run build_runner watch --delete-conflicting-outputs
+
+gen_localization:
+  - flutter gen-l10n --arb-dir="lib/l10n/arb"
+
+gen_assets:
+  - spider build
+
+clean:
+  - rm -Rf build
+  - flutter clean
+  - flutter pub get
+  - rm -Rf ios/Pods
+  - rm -Rf ios/.symlinks
+  - rm -Rf ios/Flutter/Flutter.framework
+  - rm -Rf ios/Flutter/Flutter.podspec
+  - cd ios
+  - pod install
+  - cd ..
+
+######################## ANDROID BUILD #########################
+build_android_dev:
+  (description): for building Dev Android app
+  (scripts):
+    - flutter build apk --flavor development --release -t lib/main.dart
+      --dart-define-from-file=.env.development
+    - cd build/app/outputs/apk/development/release && open .
+
+build_android_prod:
+  (description): for building Production Android app
+  (scripts):
+    - flutter build appbundle --flavor production --release -t lib/main.dart
+      --dart-define-from-file=.env.production
+    - cd build/app/outputs/bundle/productionRelease && open .
+
+build_android_apk_prod:
+  (description): for building Production Android app
+  (scripts):
+    - flutter build apk --flavor production --release -t lib/main.dart
+      --dart-define-from-file=.env.production
+    - cd build/app/outputs/flutter-apk && open .
+
+######################## IOS BUILD #########################
+
+build_ios_dev:
+  (description): for building Development IOS app
+  (scripts):
+    - flutter build ipa --flavor development --release --target lib/main.dart
+      --dart-define-from-file=.env.development
+    - cd build/ios && open .
+
+build_ios_prod:
+  (description): for building Production IOS app
+  (scripts):
+    - flutter build ipa --flavor production --release --target lib/main.dart
+      --dart-define-from-file=.env.production
+    - cd build/ios && open .

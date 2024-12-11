@@ -1,0 +1,73 @@
+part of 'app_theme.dart';
+
+class AppThemeData {
+  static final light = AppTheme(
+    color: AppColors(
+      brightness: Brightness.light,
+      barrier: const Color(0x33000000),
+      background: const Color(0xFFFFFFFF),
+      foreground: const Color(0xFF09090B),
+      primary: const Color(0xFF18181B),
+      primaryForeground: const Color(0xFFFAFAFA),
+      secondary: const Color(0xFFF4F4F5),
+      secondaryForeground: const Color(0xFF18181B),
+      muted: const Color(0xFFF4F4F5),
+      mutedForeground: const Color(0xFF71717A),
+      destructive: const Color(0xFFEF4444),
+      destructiveForeground: const Color(0xFFFAFAFA),
+      error: const Color(0xFFEF4444),
+      errorForeground: const Color(0xFFFAFAFA),
+      border: const Color(0xFFE4E4E7),
+    ),
+    text: AppTextStyles(
+      text10: const TextStyle(fontSize: 10, color: Color(0xFF090908)),
+      text12: const TextStyle(fontSize: 12, color: Color(0xFF090908)),
+      text14: const TextStyle(fontSize: 14, color: Color(0xFF090908)),
+      text16: const TextStyle(fontSize: 16, color: Color(0xFF090908)),
+      text20: const TextStyle(fontSize: 20, color: Color(0xFF090908)),
+      text22: const TextStyle(fontSize: 22, color: Color(0xFF090908)),
+      text24: const TextStyle(fontSize: 24, color: Color(0xFF090908)),
+      text26: const TextStyle(fontSize: 26, color: Color(0xFF090908)),
+      text32: const TextStyle(fontSize: 32, color: Color(0xFF090908)),
+      text36: const TextStyle(fontSize: 36, color: Color(0xFF090908)),
+      text42: const TextStyle(fontSize: 42, color: Color(0xFF090908)),
+      text48: const TextStyle(fontSize: 48, color: Color(0xFF090908)),
+      text56: const TextStyle(fontSize: 56, color: Color(0xFF090908)),
+    ),
+  );
+
+  static final dark = AppTheme(
+    color: AppColors(
+      brightness: Brightness.dark,
+      barrier: const Color(0x7A000000),
+      background: const Color(0xFF09090B),
+      foreground: const Color(0xFFFAFAFA),
+      primary: const Color(0xFFFAFAFA),
+      primaryForeground: const Color(0xFF18181B),
+      secondary: const Color(0xFF27272A),
+      secondaryForeground: const Color(0xFFFAFAFA),
+      muted: const Color(0xFF27272A),
+      mutedForeground: const Color(0xFFA1A1AA),
+      destructive: const Color(0xFF7F1D1D),
+      destructiveForeground: const Color(0xFFFAFAFA),
+      error: const Color(0xFF7F1D1D),
+      errorForeground: const Color(0xFFFAFAFA),
+      border: const Color(0xFF27272A),
+    ),
+    text: AppTextStyles(
+      text10: const TextStyle(fontSize: 10, color: Color(0xFFFAFAFA)),
+      text12: const TextStyle(fontSize: 12, color: Color(0xFFFAFAFA)),
+      text14: const TextStyle(fontSize: 14, color: Color(0xFFFAFAFA)),
+      text16: const TextStyle(fontSize: 16, color: Color(0xFFFAFAFA)),
+      text20: const TextStyle(fontSize: 20, color: Color(0xFFFAFAFA)),
+      text22: const TextStyle(fontSize: 22, color: Color(0xFFFAFAFA)),
+      text24: const TextStyle(fontSize: 24, color: Color(0xFFFAFAFA)),
+      text26: const TextStyle(fontSize: 26, color: Color(0xFFFAFAFA)),
+      text32: const TextStyle(fontSize: 32, color: Color(0xFFFAFAFA)),
+      text36: const TextStyle(fontSize: 36, color: Color(0xFFFAFAFA)),
+      text42: const TextStyle(fontSize: 42, color: Color(0xFFFAFAFA)),
+      text48: const TextStyle(fontSize: 48, color: Color(0xFFFAFAFA)),
+      text56: const TextStyle(fontSize: 56, color: Color(0xFFFAFAFA)),
+    ),
+  );
+}

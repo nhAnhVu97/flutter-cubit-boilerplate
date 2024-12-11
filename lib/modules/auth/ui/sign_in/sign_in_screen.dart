@@ -1,0 +1,25 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:boilerplate_app/core/di/di.dart';
+import 'package:boilerplate_app/modules/auth/ui/sign_in/cubit/sign_in_cubit.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+@RoutePage()
+class SignInScreen extends StatefulWidget {
+  const SignInScreen({super.key});
+
+  @override
+  State<SignInScreen> createState() => _SignInScreenState();
+}
+
+class _SignInScreenState extends State<SignInScreen> {
+  final _cubit = di.get<SignInCubit>();
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => _cubit,
+      child: const Placeholder(),
+    );
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "@@locale": "es",
+  "counterAppBarTitle": "Counter ES",
+  "@counterAppBarTitle": {
+    "description": "Text shown in the AppBar of the Counter Page"
+  },
+  "title": "title",
+  "@title": {
+    "description": "A message with a single parameter"
+  }
+}
