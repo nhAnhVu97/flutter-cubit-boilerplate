@@ -13,15 +13,13 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-  final _cubit = di.get<SignUpCubit>();
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => _cubit,
+      create: (context) => di.get<SignUpCubit>(),
       child: const Scaffold(
         body: Center(
-          child: Text('sign up screen'),
+          child: Text('sign up'),
         ),
       ),
     );
