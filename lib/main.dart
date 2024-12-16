@@ -3,7 +3,7 @@ import 'package:boilerplate_app/core/configs/app_config.dart';
 import 'package:boilerplate_app/core/di/di.dart';
 import 'package:boilerplate_app/core/utils/bloc_observer.dart';
 import 'package:boilerplate_app/core/utils/permission/app_permission.dart';
-import 'package:boilerplate_app/modules/app/app_module.dart';
+import 'package:boilerplate_app/main_app.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:toolkit/toolkit.dart';
@@ -28,5 +28,5 @@ Future<void> main() async {
   //- DI
   await configureDependencies();
 
-  runApp(const App());
+  runApp(const MainApp());
 }
