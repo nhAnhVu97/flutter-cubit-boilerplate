@@ -1,4 +1,4 @@
-import 'package:boilerplate_app/localizations/l10n.dart';
+import 'package:boilerplate_app/localizations/arb/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

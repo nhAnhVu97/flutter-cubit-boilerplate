@@ -4,7 +4,7 @@ import 'package:boilerplate_app/core/di/di.dart';
 import 'package:boilerplate_app/core/enums/localization_enum.dart';
 import 'package:boilerplate_app/core/enums/theme_enum.dart';
 import 'package:boilerplate_app/core/routes/app_router.dart';
-import 'package:boilerplate_app/localizations/l10n.dart';
+import 'package:boilerplate_app/localizations/arb/app_localizations.dart';
 import 'package:boilerplate_app/modules/app/cubit/app_cubit.dart';
 import 'package:boilerplate_app/modules/auth/cubit/auth_cubit.dart';
 import 'package:boilerplate_app/modules/deeplink/constants/deeplink_constants.dart';
@@ -49,7 +49,8 @@ class MainApp extends StatelessWidget {
   FutureOr<DeepLink> _deepLinkBuilder(PlatformDeepLink deepLink) {
     if (deepLink.path == '/') return DeepLink.defaultPath;
 
-    final isAvailablePath = DeeplinkConstants.availableDeeplinkPaths.contains(deepLink.path);
+    final isAvailablePath =
+        DeeplinkConstants.availableDeeplinkPaths.contains(deepLink.path);
     if (!isAvailablePath) return DeepLink.defaultPath;
 
     if (deepLink.initial) {
