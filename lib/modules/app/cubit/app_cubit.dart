@@ -24,11 +24,13 @@ class AppCubit extends Cubit<AppState> {
 
   Future<void> initialize() async {
     try {
+      PerformanceMonitor.startTrace('app_initialize');
       _loadTheme();
       _loadLocalization();
 
       await Future<void>.delayed(const Duration(seconds: 1));
       emit(state.copyWith(launchLoadState: LaunchLoadState.completed()));
+      PerformanceMonitor.stopTrace('app_initialize');
     } catch (error, stack) {
       AppLogger.e('app load failed', error: error, stackTrace: stack);
       emit(state.copyWith(launchLoadState: LaunchLoadState.failed()));
