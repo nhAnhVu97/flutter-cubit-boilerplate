@@ -37,7 +37,7 @@ dev_dependencies:
   freezed: ^3.0.6
   json_serializable: ^6.9.0
   mocktail: ^1.0.3
-  retrofit_generator: ^9.1.5
+  retrofit_generator: ^9.3.0
   very_good_analysis: ^8.0.0
 
 flutter:
