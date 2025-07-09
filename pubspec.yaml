@@ -20,7 +20,7 @@ dependencies:
   intl: ^0.20.2
   json_annotation: ^4.9.0
   permission_handler: ^12.0.0+1
-  retrofit: ^4.4.2
+  retrofit: ^4.6.0
   shared_preferences: ^2.3.3
   toolkit:
     path: "./packages/toolkit"
